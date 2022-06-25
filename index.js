@@ -9,7 +9,9 @@ dotenv.config();
 let port = process.env.PORT || 5000;
 
 const app = express();
-app.use(express.json());
+
+app.use(express.json({limit:"5MB"}));
+
 app.use('/',express.static(path.join(__dirname,'frontend','build')))
 app.use('/contact',contactRoute);
 
