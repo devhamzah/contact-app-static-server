@@ -11,7 +11,7 @@ let port = process.env.PORT || 5000;
 const app = express();
 app.use(express.json());
 app.use('/',express.static(path.join(__dirname,'frontend','build')))
-app.use('/',contactRoute);
+app.use('/contact',contactRoute);
 
 
 mongoose.connect(process.env.URL,{
