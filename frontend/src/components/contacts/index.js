@@ -3,23 +3,12 @@ import styles from "./index.module.css";
 import Contact from "../contact";
 import { useSelector } from "react-redux";
 import Loading from "../loading/loading";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 const Contacts = () => {
     const [mainLoading,setMainLoading] = useState(false);
     const store = useSelector((state)=> state.contactReducer);
-
-    useEffect(()=>{
-        if(store.length == 0){
-            setMainLoading(true)
-        }
-       const mylo = setTimeout(() => {
-            setMainLoading(false);
-        }, 4000);
-
-        return ()=> clearTimeout(mylo);
-    },[])
 
     if(store.length !== 0){
         return <section>
