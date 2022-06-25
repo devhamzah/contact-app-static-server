@@ -1,8 +1,8 @@
 
 import { useSelector, useDispatch } from "react-redux";
 import styles from "./index.module.css";
-import { toggleForm ,togglePushLoading } from "../../redux/actions/uiAcions";
-import { useState } from "react";
+import { toggleForm, togglePushLoading} from "../../redux/actions/uiAcions";
+import { useEffect, useState } from "react";
 import FileBase64 from "react-file-base64";
 import { postContact } from "../../redux/actions/contactActions";
 
@@ -24,20 +24,17 @@ const FormAddContact = () => {
 
 
 
-
     const clear = () => {
         setFormData({ name: "", email: "", phoneNumber: "", image: "" })
     }
 
     const handleSubmit = () => {
       
-
         if (formData.name && formData.email && formData.phoneNumber) {
-            console.log("i am submit the data");
             let newContact = {
                 ...formData,bgColor:colors[randomColor()]
             };
-            dispatch(togglePushLoading());
+            dispatch(togglePushLoading);
             dispatch(postContact(newContact));
             dispatch(toggleForm());
             clear();

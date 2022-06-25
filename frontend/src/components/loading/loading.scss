@@ -17,6 +17,9 @@ $rotate-origin: -32deg;
 	animation: loading-spinner-spin 2s linear infinite;
 	will-change: transform;
 }
+.loadings{
+	margin-top: 20px;
+}
 
 @keyframes loading-spinner-spin {
 	from {

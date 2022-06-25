@@ -9,16 +9,16 @@ import DeleteModal from "./components/deleteModal";
 import { useSelector } from "react-redux";
 import Loading from "./components/loading/loading";
 const App=()=>{
-    const {pushLoading} = useSelector((state)=> state.uiReducer);
+    const store = useSelector((state)=> state.contactReducer);
     const dispatch = useDispatch()
     useEffect(()=>{
         dispatch(fetchingContacts())
     },[dispatch]);
+    console.log(store)
 return <>
     <FormAddContact/> 
     <NavBar/>
-    <Contacts/>
-    { pushLoading && <Loading/>}
+    {store.length ?<Contacts/> :<Loading/>  }
     <DeleteModal/>
 
 </>

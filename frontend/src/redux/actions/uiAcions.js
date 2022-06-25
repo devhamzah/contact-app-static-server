@@ -15,3 +15,8 @@ export const togglePushLoading = () =>{
         type: "TOGGLE_PUSH_LOADING"
     }
 }
+export const togglePreContactLoading = () =>{
+    return {
+        type: "TOGGLE_PRE_CONATCT_LOADING"
+    }
+}
