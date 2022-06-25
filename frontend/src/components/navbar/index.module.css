@@ -1,0 +1,73 @@
+
+.navSection{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding:  7px 0px;
+}
+.navbar{
+    margin: auto;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.searchInputDiv input{
+  min-width: 800px;
+  margin: auto;
+}
+.logoDiv{
+    display: flex;
+    align-items: center;
+}
+.logoDiv span{
+    font-size: 1.6rem;
+    margin-left: 5px;
+}
+@media screen and (max-width:1230px) {
+        .searchInputDiv input{
+  min-width: 500px;
+}
+}
+
+@media screen and (max-width:890px) {
+        .searchInputDiv input{
+  min-width: 300px;
+}
+}
+@media screen and (max-width:700px) {
+        .searchInputDiv input{
+  min-width: 70vw;
+}
+}
+@media screen and (max-width: 720px) {
+    .searchInputDiv{
+        width: 80%;
+    }
+    .logoDiv span{
+        display: none;
+    }
+    .addBtn span{
+        display: none;
+    }
+    .addBtn{
+        border-radius: 50%;
+        padding: 15px 15px;
+        position: fixed;
+        top: 85%;
+        left: 80%;
+        z-index: 1;
+    }
+
+  }
+.addIcon{
+    font-size: 1.25rem;
+    color: rgb(26,115,232);
+}
+.addBtn{
+    font-size: 1rem;
+}
+.addBtn:hover{
+    background-color:rgba(26, 115, 232, 0.15) ;
+}
+.addBtn span{
+    margin-left: 6px;
+}

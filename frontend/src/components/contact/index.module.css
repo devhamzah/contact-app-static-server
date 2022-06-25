@@ -1,0 +1,87 @@
+.contactBody{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+@media screen and (max-width:890px) {
+    .mail{
+        display: none;
+    }
+    .contactBody{
+        justify-content: space-between;
+    }
+}
+.contactBtnsDiv button{
+    margin: 0px 10px;
+}
+.contactName{
+    display: flex;
+    align-items: center;
+}
+.contactName span{
+    margin: 0px 10px;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+.contactName span:hover{
+    color:rgb(26,115,232);
+    cursor: pointer;
+}
+.editBtn{
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    color: rgba(26, 115, 232, 0.521);
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.removeBtn{
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    color: rgba(232, 26, 26, 0.521);
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.editBtn:hover{
+    color: rgba(26, 115, 232, 0.911);
+}
+.removeBtn:hover{
+    color: rgb(232, 26, 26);
+
+}
+.contactBody img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50% ;
+    object-fit: cover;
+}
+.contactBody .divh{
+    width: 50px;
+    height: 50px;
+    border-radius: 50% ;
+    /* background-color: orange; */
+    font-size: 2rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+.contactBody{
+    margin: 15px 0px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: all 0.2s linear;
+}
+.contactBody:hover{
+   
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.contactBody div{
+    width: 100%;
+    text-align: center;
+}

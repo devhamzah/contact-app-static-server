@@ -1,0 +1,62 @@
+.formModal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    z-index: 10;
+    transition: 250ms ease-in-out;
+}
+.formModalActive{
+    transform: translate(-50%,-50%) scale(1);
+}
+.card{
+    background-color: white;
+    padding: 20px 10px;
+    border-radius: 6px;
+    text-align: center;
+}
+.card input{
+    width: 240px;
+}
+.card h1{
+   margin-bottom: 17px;
+}
+.card div{
+    margin: 10px 10px;
+}
+.overlay{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.334);
+    opacity: 0;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    pointer-events: none;
+    transition: all 250ms linear;
+}
+.overlayActive{
+    opacity: 1;
+    pointer-events: all;
+}
+.formBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+.submitBtn{
+    color: rgb(26,115,232);
+    font-size: 1rem;
+}
+.cancleBtn{
+    color: rgb(232, 26, 26);
+    font-size: 1rem;
+}
+.submitBtn:hover{
+    background-color: rgb(26,115,232,0.09);
+}
+.cancleBtn:hover{
+    background-color: rgba(232, 26, 26, 0.09);
+}
