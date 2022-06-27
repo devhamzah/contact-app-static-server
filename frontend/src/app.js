@@ -8,6 +8,7 @@ import {fetchingContacts} from "./redux/actions/contactActions";
 import DeleteModal from "./components/deleteModal";
 import { useSelector } from "react-redux";
 import Loading from "./components/loading/loading";
+import ContactDetail from "./components/contactDetail";
 const App=()=>{
     const store = useSelector((state)=> state.contactReducer);
     const dispatch = useDispatch()
@@ -19,6 +20,7 @@ return <>
     <NavBar/>
     {store.length ?<Contacts/> :<Loading/>  }
     <DeleteModal/>
+    <ContactDetail/>
 
 </>
 }

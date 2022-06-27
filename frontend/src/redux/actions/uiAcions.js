@@ -20,3 +20,9 @@ export const togglePreContactLoading = () =>{
         type: "TOGGLE_PRE_CONATCT_LOADING"
     }
 }
+export const togglContactDetail = (id) =>{
+    return {
+        type:"TOGGLE_CONTACT_DETAIL",
+        payload:id
+    }
+}

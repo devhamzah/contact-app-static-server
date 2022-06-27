@@ -3,13 +3,16 @@ const initialState = {
     stateFormModal : false,
    stateDeleteModal:"",
    pushLoading:false,
-   preContactLoading :false
+   preContactLoading :false,
+   contactDetail:""
 }
 
 const uiReducer = (state = initialState,action)=>{
     switch (action.type) {
         case "TOGGLE_FORM_MODAL":
             return state = {...state, stateFormModal : !state.stateFormModal}
+        case "TOGGLE_CONTACT_DETAIL":
+            return state = {...state, contactDetail : action.payload}
         case "TOGGLE_PUSH_LOADING":
             return state = {...state, pushLoading : !state.pushLoading}
         case "TOGGLE_PRE_CONATCT_LOADING":

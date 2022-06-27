@@ -10,6 +10,9 @@
     .contactBody{
         justify-content: space-between;
     }
+    .number{
+        display: none;
+    }
 }
 .contactBtnsDiv button{
     margin: 0px 10px;
