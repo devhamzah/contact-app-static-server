@@ -1,7 +1,6 @@
 import axios from "axios";
-
-// const url = 'http://localhost:5000/contact';
-const url = '/contact';
+let developing = false;
+const  url  =  developing ? 'http://localhost:5000/contact': "/contact";
 
 
 // For getiing all consts from mongoose database

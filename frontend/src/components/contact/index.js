@@ -16,9 +16,9 @@ const Contact = ({ contact }) => {
         dispatch(togglContactDetail(id));
     }
     return <div className={styles.contactBody}>
-        <div className={styles.contactName}>
-            {contact.image ?<img src={contact.image} alt="" /> : <div style={{backgroundColor: `#${contact.bgColor}`}} className={styles.divh}><p>{ contact.name && contact.name.charAt(0)}</p></div> }
-            <span data-id={contact._id} onClick={handleDetail}>{contact.name}</span>
+        <div  className={styles.contactName}>
+            {contact.image ?<img  src={contact.image} alt="" /> : <div  style={{backgroundColor: `#${contact.bgColor}`}} className={styles.divh}><p>{ contact.name && contact.name.charAt(0)}</p></div> }
+            <span data-id={contact._id} onClick={handleDetail} >{contact.name}</span>
         </div>
         <div className={styles.number}><p>{contact.phoneNumber}</p></div>
         <div className={styles.mail}><p>{contact.email}</p></div>
