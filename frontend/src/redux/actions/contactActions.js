@@ -35,9 +35,9 @@ export const deleteContact = (id) => async (dispatch) =>{
 
 export const findContac = (str) => async (dispatch) =>{
     try {
-        const data = await apis.searchContact(str);
-        console.log(data);
+        const {data} = await apis.searchContact(str);
+        dispatch({ type: "FETCH_ALL_CONTACTS" ,payload:data })
     } catch (error) {
-        
+        console.log(error);
     }
 }

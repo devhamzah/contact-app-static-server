@@ -11,7 +11,7 @@ const NavBar=()=>{
     const dispatch = useDispatch();
 
     const handleSearch = (e) => {
-        let searchWrod = 'sayam'
+        let searchWrod = e.target.value;
         console.log(searchWrod)
         dispatch(findContac(searchWrod));
     }

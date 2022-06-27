@@ -34,17 +34,23 @@ export const deleteContact  = async (req,res) =>{
 //
 export const findContact = async(req,res) =>{
     const nam = req.params.id;
-    console.log(name);
+    let searchWord = new RegExp(`^${nam}.*`);
+    
     try {
-        await ContactStore.find({name:nam},(err,data)=>{
+        
+        await ContactStore.find({ "name": { $regex: searchWord,$options :"i" } },(err,data)=>{
             if(err){
-                console.log(err);
+                console.log(err)
             }else{
-               console.log(data);
+                res.send(data);
             }
-        });
-   
+        })
     } catch (error) {
-        res.status(404).json({err:error});
+        
     }
+
+
+       
+       
+   
 }

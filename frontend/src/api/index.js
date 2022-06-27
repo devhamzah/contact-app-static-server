@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const url = 'http://localhost:5000/contact';
-const url = '/contact';
+const url = 'http://localhost:5000/contact';
+// const url = '/contact';
 
 
 // For getiing all consts from mongoose database
