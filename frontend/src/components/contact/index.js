@@ -10,8 +10,6 @@ const Contact = ({ contact }) => {
         let id = e.currentTarget.getAttribute('data-id');
             dispatch(togglDeleteModals(id));
     }
-    console.log(contact)
-
     return <div className={styles.contactBody}>
         <div className={styles.contactName}>
             {contact.image ?<img src={contact.image} alt="" /> : <div style={{backgroundColor: `#${contact.bgColor}`}} className={styles.divh}><p>{ contact.name && contact.name.charAt(0)}</p></div> }

@@ -27,9 +27,17 @@ export const postContact = (fdata) => async (dispatch) => {
 
 export const deleteContact = (id) => async (dispatch) =>{
     try {
-        await apis.deleteContact(id);
-        
+        await apis.deleteContact(id); 
     } catch (error) {
        console.log(error)
+    }
+}
+
+export const findContac = (str) => async (dispatch) =>{
+    try {
+        const data = await apis.searchContact(str);
+        console.log(data);
+    } catch (error) {
+        
     }
 }

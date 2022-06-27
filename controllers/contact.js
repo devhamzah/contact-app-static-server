@@ -31,3 +31,20 @@ export const deleteContact  = async (req,res) =>{
         console.log("delete server failed")
     }
 }
+//
+export const findContact = async(req,res) =>{
+    const nam = req.params.id;
+    console.log(name);
+    try {
+        await ContactStore.find({name:nam},(err,data)=>{
+            if(err){
+                console.log(err);
+            }else{
+               console.log(data);
+            }
+        });
+   
+    } catch (error) {
+        res.status(404).json({err:error});
+    }
+}

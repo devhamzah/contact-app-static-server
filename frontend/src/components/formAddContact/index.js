@@ -2,7 +2,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import styles from "./index.module.css";
 import { toggleForm, togglePushLoading} from "../../redux/actions/uiAcions";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import FileBase64 from "react-file-base64";
 import { postContact } from "../../redux/actions/contactActions";
 

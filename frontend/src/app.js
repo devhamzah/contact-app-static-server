@@ -14,7 +14,6 @@ const App=()=>{
     useEffect(()=>{
         dispatch(fetchingContacts())
     },[dispatch]);
-    console.log(store)
 return <>
     <FormAddContact/> 
     <NavBar/>
