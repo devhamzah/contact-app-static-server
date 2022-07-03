@@ -17,7 +17,7 @@ const ContactDetail = () => {
             active = true;
         }
 
-        console.log(active);
+
         return <section className={styles.sectionForm}>
             <div className={`${styles.formModal} ${contactDetail ? styles.formModalActive : ""} `}>
                 <div className={styles.card}>

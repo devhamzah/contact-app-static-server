@@ -26,3 +26,14 @@ export const togglContactDetail = (id) =>{
         payload:id
     }
 }
+export const toggleMainLoading = () =>{
+    return {
+        type:"TOGGLE_MAIN_LOADING"
+    }
+}
+export const startEditing = (editableObject) =>{
+    return {
+        type:"START_EDITING",
+        payload:editableObject
+    }
+}

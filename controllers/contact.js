@@ -21,7 +21,6 @@ export const saveContact = async (req,res) =>{
         res.status(409).json({message:error.message});
     }
 }
-
 //Deleting contact 
 export const deleteContact  = async (req,res) =>{
     try {
@@ -31,7 +30,7 @@ export const deleteContact  = async (req,res) =>{
         console.log("delete server failed")
     }
 }
-//
+// Seach Contact by name 
 export const findContact = async(req,res) =>{
     const nam = req.params.id;
     let searchWord = new RegExp(`^${nam}.*`);
@@ -46,11 +45,26 @@ export const findContact = async(req,res) =>{
             }
         })
     } catch (error) {
-        
+         
     }
-
-
+}
+// Find by Id and edit contact 
+export const updateContact = async (req,res)=>{
+     
+      const sdata = req.body;
+      const {id} = req.params;
+    //   console.log(data);
+    //   console.log(id);
        
-       
-   
+    try {
+        await ContactStore.findByIdAndUpdate(id,sdata,{new:true},(err,data)=>{
+            if(err){
+                console.log("fuck")
+            }else{
+                res.send(data);
+            }
+        })
+    } catch (error) {
+        console.log(error);
+    }
 }

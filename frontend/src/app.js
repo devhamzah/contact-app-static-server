@@ -11,17 +11,17 @@ import Loading from "./components/loading/loading";
 import ContactDetail from "./components/contactDetail";
 const App=()=>{
     const store = useSelector((state)=> state.contactReducer);
+    const {mainLoading} = useSelector((state)=> state.uiReducer);
     const dispatch = useDispatch()
     useEffect(()=>{
-        dispatch(fetchingContacts())
+        dispatch(fetchingContacts());
     },[dispatch]);
 return <>
     <FormAddContact/> 
     <NavBar/>
-    {store.length ?<Contacts/> :<Loading/>  }
+    {  mainLoading ? <Loading/>:  store.length === 0 ? <h1 className="nocontact">No Contacts</h1> : <Contacts/>}
     <DeleteModal/>
     <ContactDetail/>
-
 </>
 }
 export default App;

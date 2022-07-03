@@ -42,3 +42,9 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+.nocontact{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: rgb(228, 3, 3);
+}

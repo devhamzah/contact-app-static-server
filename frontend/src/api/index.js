@@ -14,3 +14,6 @@ export const deleteContact = (id) => axios.delete(`${url}/${id}`);
 
 // Requestin to search contact from mongoose databse by string
 export const searchContact = (id) => axios.get(`${url}/${id}`);
+
+// Requestin to search contact from mongoose databse by string
+export const updateContact = (id,obj) => axios.patch(`${url}/${id}`,obj);
